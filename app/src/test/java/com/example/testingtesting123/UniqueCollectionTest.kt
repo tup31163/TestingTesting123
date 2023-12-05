@@ -30,6 +30,16 @@ class UniqueCollectionTest {
         )
     }
 
+//    @Test
+//    fun removeOneItem() {
+//        collection.addItem(Item("item1"))
+//        collection.addItem(Item("item2"))
+//
+//        collection.remove(Item("item1"))
+//
+//        collection.remove(Item("item3"))
+//    }
+
     @Test
     fun clearAllItems() {
         collection.addItem(Item("item1"))
