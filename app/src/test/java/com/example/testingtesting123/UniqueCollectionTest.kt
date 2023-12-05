@@ -30,15 +30,29 @@ class UniqueCollectionTest {
         )
     }
 
-//    @Test
-//    fun removeOneItem() {
-//        collection.addItem(Item("item1"))
-//        collection.addItem(Item("item2"))
-//
-//        collection.remove(Item("item1"))
-//
-//        collection.remove(Item("item3"))
-//    }
+    @Test
+    fun removeOneItem() {
+        collection.addItem(Item("item1"))
+        collection.addItem(Item("item2"))
+
+        val originalSize = collection.size()
+        collection.remove(Item("item1"))
+        val newSize = collection.size()
+
+        assert(originalSize == 2 && newSize == 1) {"Item not removed"}
+    }
+
+    @Test
+    fun cannotRemoveItem() {
+        collection.addItem(Item("item1"))
+        collection.addItem(Item("item2"))
+
+        val originalSize = collection.size()
+        collection.remove(Item("item3"))
+        val newSize = collection.size()
+
+        assert(originalSize == newSize)
+    }
 
     @Test
     fun clearAllItems() {
