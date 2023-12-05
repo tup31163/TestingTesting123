@@ -1,7 +1,5 @@
 package com.example.testingtesting123
 
-import org.junit.Assert.*
-
 import org.junit.Before
 import org.junit.Test
 
@@ -27,7 +25,9 @@ class UniqueCollectionTest {
         collection.addItem(Item("item1"))
         collection.addItem(Item("Item2"))
 
-        assert (collection.size() == 2)
+        assert (
+            collection.size() == 2
+        )
     }
 
     @Test
@@ -37,7 +37,7 @@ class UniqueCollectionTest {
 
         val originalSize = collection.size()
         collection.clear()
-        val newSize = collection.size();
+        val newSize = collection.size()
 
         assert(originalSize == 2 && newSize == 0) {"Items not cleared"}
     }
